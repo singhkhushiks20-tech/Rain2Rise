@@ -51,8 +51,8 @@ async function loadAnalysis() {
     status.innerText = "Loading datasets...";
 
     try {
-        rainfallRecords = await loadCSV("datasets/rainfall.csv");
-        stockRecords = await loadCSV("datasets/stocks.csv");
+        rainfallRecords = await loadCSV("rainfall.csv");
+        stockRecords = await loadCSV("stocks.csv");
 
         showDashboard();
 

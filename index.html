@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain2Rise | Rainfall & Stock Insights</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">🌧 Rain2Rise</div>
+    <span class="tag">IDP PROJECT 2026</span>
+</header>
+
+<section class="hero">
+    <h1>Rainfall Intelligence Meets Stock Insights</h1>
+    <p>Explore rainfall patterns and understand their relationship with stock market trends.</p>
+</section>
+
+<main>
+
+    <section class="cards">
+
+        <div class="card" onclick="showSection('rainfall')">
+            <span>🌧️</span>
+            <h2>Rainfall Tracker</h2>
+            <p>Explore rainfall by location.</p>
+            <button>Explore Rainfall →</button>
+        </div>
+
+        <div class="card" onclick="showSection('stocks')">
+            <span>📈</span>
+            <h2>Stock Dashboard</h2>
+            <p>Explore sample stock data.</p>
+            <button>View Stocks →</button>
+        </div>
+
+        <div class="card" onclick="showSection('compare')">
+            <span>🔗</span>
+            <h2>Rain vs Stocks</h2>
+            <p>Compare rainfall and stock trends.</p>
+            <button>Compare Trends →</button>
+        </div>
+
+        <div class="card" onclick="showSection('lab')">
+            <span>🧪</span>
+            <h2>Innovation Lab</h2>
+            <p>Explore rainfall scenarios.</p>
+            <button>Test a Concept →</button>
+        </div>
+
+    </section>
+
+    <!-- Rainfall Tracker -->
+    <section id="rainfall" class="panel">
+
+        <h2>🌧 Rainfall Tracker</h2>
+
+        <label>Select Location</label>
+
+        <select id="location">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Kolkata">Kolkata</option>
+        </select>
+
+        <button onclick="showRainfall()">Check Rainfall</button>
+
+        <h3 id="rainResult">Select a location to view sample data.</h3>
+
+    </section>
+
+    <!-- Stock Dashboard -->
+    <section id="stocks" class="panel">
+
+        <h2>📈 Stock Dashboard</h2>
+
+        <label>Select Company</label>
+
+        <select id="company">
+            <option value="Example Company">Example Company</option>
+            <option value="TCS">TCS</option>
+            <option value="Reliance">Reliance</option>
+            <option value="Infosys">Infosys</option>
+            <option value="ITC">ITC</option>
+        </select>
+
+        <button onclick="showStock()">View Stock</button>
+
+        <h3 id="stockResult">Select a company to view sample data.</h3>
+
+        <p class="note">
+            Only Example Company has illustrative sample prices in the current dataset.
+            Other company options are placeholders.
+        </p>
+
+    </section>
+
+    <!-- Comparison Dashboard -->
+    <section id="compare" class="panel">
+
+        <h2>🔗 Rainfall vs Stock Comparison</h2>
+
+        <p>Compare monthly rainfall and illustrative stock prices.</p>
+
+        <canvas id="comparisonChart"></canvas>
+
+        <p id="analysisStatus">Click to load dataset analysis.</p>
+
+        <h3 id="correlationResult"></h3>
+
+        <p class="note">
+            This project uses illustrative sample data, not verified live rainfall
+            or stock market data.
+        </p>
+
+    </section>
+
+    <!-- Innovation Lab -->
+    <section id="lab" class="panel">
+
+        <h2>🧪 Innovation Lab</h2>
+
+        <p>Test a simple rainfall scenario.</p>
+
+        <label>Enter Rainfall (mm)</label>
+
+        <input
+            type="number"
+            id="rainInput"
+            placeholder="Example: 150"
+            min="0"
+        >
+
+        <button onclick="testConcept()">Analyze</button>
+
+        <h3 id="labResult"></h3>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Rain2Rise | Interdisciplinary Project 2026</p>
+    <p>Educational prototype. Not investment advice.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
